@@ -10,7 +10,7 @@
         android:id="@+id/textViewResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Video"
+        android:text="Select Audio"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,16 +1,22 @@
 package com.example.multimediacontrolmechanism;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 
+import android.speech.RecognitionListener;
+import android.speech.RecognizerIntent;
+import android.speech.SpeechRecognizer;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -19,13 +25,15 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class VideoFolder extends AppCompatActivity {
+public class VideoFolder extends AppCompatActivity  {
 
     Adapter_VideoFolder obj_adapter;
     ArrayList<Model_Video> al_video = new ArrayList<>();
     RecyclerView recyclerView;
     RecyclerView.LayoutManager recyclerViewLayoutManager;
     private static final int REQUEST_PERMISSIONS = 100;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,7 +119,6 @@ public class VideoFolder extends AppCompatActivity {
 
     }
 
-
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -128,5 +135,6 @@ public class VideoFolder extends AppCompatActivity {
             }
         }
     }
+
 }
 
